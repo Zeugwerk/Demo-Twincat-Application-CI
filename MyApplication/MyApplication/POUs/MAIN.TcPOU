@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.12">
+  <POU Name="MAIN" Id="{aa34fcfe-6c3e-4d22-9edb-c207d34b0a3c}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+  _variant : STRING := 'Default';
+  _firstCycle : BOOL := TRUE;
+  _pushover : Pushover.PushoverClient('my-token', 'my-user');
+  _message : STRING(255);
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF _firstCycle
+THEN
+  _firstCycle := FALSE;
+  _message := CONCAT(CONCAT('Application using variant ', _variant), ' started');
+  _pushover.SendMessageAsync('MyApplication', _message);
+END_IF
+
+_pushover.Cyclic();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
