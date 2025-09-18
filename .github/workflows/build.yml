@@ -29,8 +29,7 @@ jobs:
       - name: Checkstyle report
         uses: jwgmeligmeyling/checkstyle-github-action@a12be500c097a5cedab881d4785ef9b4a4d3ee6a
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          checkstyle_report: "**/*-checkstyle-result.xml"
+          paht: "**/*-checkstyle-result.xml"
 #      - name: Publish Unittest
 #        uses: EnricoMi/publish-unit-test-result-action@v2
 #        with:
