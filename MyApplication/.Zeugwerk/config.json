@@ -34,30 +34,6 @@
               "distributor-name": "Stefan Besler"
             },
             {
-              "version": "3.4.5.0",
-              "name": "TwinCAT.XAE.PLC.Lib.Tc2_Standard",
-              "branch": "main",
-              "target": "TC3.1",
-              "configuration": "Release",
-              "distributor-name": "Beckhoff Automation"
-            },
-            {
-              "version": "3.6.4.0",
-              "name": "TwinCAT.XAE.PLC.Lib.Tc2_System",
-              "branch": "main",
-              "target": "TC3.1",
-              "configuration": "Release",
-              "distributor-name": "Beckhoff Automation"
-            },
-            {
-              "version": "3.4.5.0",
-              "name": "TwinCAT.XAE.PLC.Lib.Tc3_Module",
-              "branch": "main",
-              "target": "TC3.1",
-              "configuration": "Release",
-              "distributor-name": "Beckhoff Automation"
-            },
-            {
               "version": "1.0.0.0",
               "name": "Testbench",
               "branch": "main",
@@ -67,7 +43,11 @@
             }
           ],
           "references": {
-            "*": []
+            "*": [
+				"Tc2_Standard=*",
+				"Tc2_System=*",
+				"Tc3_Module=*"
+			]
           },
           "repositories": [],
           "bindings": {},

@@ -7,6 +7,7 @@ VAR
   _firstCycle : BOOL := TRUE;
   _pushover : Pushover.PushoverClient('my-token', 'my-user');
   _message : STRING(255);
+  _unusedButLoved : INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
