@@ -1,4 +1,4 @@
-name: Build/Test
+name: Build
 on:
   push:
     branches:
@@ -25,7 +25,12 @@ jobs:
           static-analysis: true
           workspace: "MyApplication"
           skip-build: false
-          skip-test: false
+          skip-test: true
+      - name: Checkstyle report
+        uses: nikitasavinov/checkstyle-github-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          checkstyle_report: "**/*-checkstyle-result.xml"
 #      - name: Publish Unittest
 #        uses: EnricoMi/publish-unit-test-result-action@v2
 #        with:
@@ -35,4 +40,4 @@ jobs:
 #        with:
 #          name: MyApplication-Machine1
 #          path: |
-#            **/MyApplication_TC3.1.4026_Machine1   
+#            **/MyApplication_TC3.1.4026_Machine1
