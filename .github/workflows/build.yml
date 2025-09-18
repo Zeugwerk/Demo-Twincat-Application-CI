@@ -27,7 +27,7 @@ jobs:
           skip-build: false
           skip-test: true
       - name: Checkstyle report
-        uses: nikitasavinov/checkstyle-github-action@master
+        uses: jwgmeligmeyling/checkstyle-github-action@a12be500c097a5cedab881d4785ef9b4a4d3ee6a
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           checkstyle_report: "**/*-checkstyle-result.xml"
