@@ -23,7 +23,7 @@ jobs:
           variant-build: "Machine1"
           variant-test: "NoHardware"
           static-analysis: true
-          workspace: "src"
+          workspace: "MyApplication"
           skip-build: false
           skip-test: false
 #      - name: Publish Unittest
