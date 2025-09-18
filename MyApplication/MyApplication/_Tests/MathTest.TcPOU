@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.12">
+  <POU Name="MathTest" Id="{0aaa6790-22c8-47d8-acd3-d2b35b760981}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK MathTest : Testbench.IUnitTest;
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Test_GivenTwoIntegers_WhenAddInt_SumIsCalculated" Id="{f79711e1-b2eb-4dda-9ef7-90ee24f04b36}">
+      <Declaration><![CDATA[METHOD Test_GivenTwoIntegers_WhenAddInt_SumIsCalculated
+VAR_INPUT
+  assertions : Testbench.IAssertions;
+END_VAR
+VAR
+  result : INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[result := Math.AddInt(5, 6);
+
+assertions.EqualsInt(expected := 11, actual := result, '5+6=11');]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>
