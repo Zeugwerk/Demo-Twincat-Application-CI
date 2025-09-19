@@ -3,7 +3,7 @@
 work in progress
 
 - [ ] variants
-- [ ] enable unit tests
+- [x] enable unit tests
 - [ ] application installer
 
 ## How CI with zkbuild works on GitHub
