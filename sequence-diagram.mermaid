@@ -11,7 +11,7 @@ sequenceDiagram
     GH->>PS: curl request (auth required)
     PS->>J: Forward build request
     J->>BN: Start zkbuild job
-    BN->>R: Clone source code
+    BN->>R: Clone source code (auth optional)
     BN->>BN: Build with Devtools
     BN->>PS: Upload artifacts
     PS->>GH: Provide artifacts (auth required)
