@@ -26,14 +26,14 @@ jobs:
           workspace: "MyApplication"
           skip-build: false
           skip-test: false
-      - name: Checkstyle report
-        uses: jwgmeligmeyling/checkstyle-github-action@a12be500c097a5cedab881d4785ef9b4a4d3ee6a
-        with:
-          path: "**/*-checkstyle-result.xml"
       - name: Publish Unittest
         uses: EnricoMi/publish-unit-test-result-action@v2
         with:
           files: archive/tests/**/TcUnit_xUnit_results.xml
+      - name: Checkstyle report
+        uses: jwgmeligmeyling/checkstyle-github-action@a12be500c097a5cedab881d4785ef9b4a4d3ee6a
+        with:
+          path: "**/*-checkstyle-result.xml"
 #      - name: Upload
 #        uses: actions/upload-artifact@v3
 #        with:
