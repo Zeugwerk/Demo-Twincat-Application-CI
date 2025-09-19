@@ -6,6 +6,9 @@ work in progress
 - [x] enable unit tests
 - [ ] application installer
 
+
+This demo project shows how to use zkbuild-action to build and test a Twincat PLC in CI on GitHub. It showcases the basic setup, configuration, secrets, and workflow.
+
 ## How CI with zkbuild works on GitHub
 
 ```mermaid
