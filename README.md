@@ -6,6 +6,8 @@ work in progress
 - [ ] enable unit tests
 - [ ] application installer
 
+## How CI with zkbuild works on GitHub
+
 ```mermaid
 sequenceDiagram
     participant U as 🧑‍💻 Developer
