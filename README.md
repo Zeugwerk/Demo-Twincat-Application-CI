@@ -6,7 +6,27 @@ work in progress
 - [ ] enable unit tests
 - [ ] application installer
 
-<img width="1117" height="606" alt="Screenshot_20250919_113942" src="https://github.com/user-attachments/assets/a809e015-e180-4b73-8920-3e2f0a4554d2" />
+```mermaid
+sequenceDiagram
+    participant U as 🧑‍💻 Developer
+    participant GH as 🐙 GitHub Action
+    participant R as 📂 GitHub Repo
+    participant PS as 📡 Proxy Server
+    participant J as 🖧 Jenkins Server
+    participant BN as 🖥️ Build Node (VM)
+
+    U->>GH: Trigger workflow
+    GH->>R: Clone source code
+    GH->>PS: curl request (auth required)
+    PS->>J: Forward build request
+    J->>BN: Start zkbuild job
+    BN->>R: Clone source code (auth optional)
+    BN->>BN: Build with Devtools
+    BN->>PS: Upload artifacts
+    PS->>GH: Provide artifacts (auth required)
+    GH->>U: Deliver artifacts
+```
+
 
 
 
