@@ -24,10 +24,11 @@ In this repository, [the workflow](https://github.com/Zeugwerk/Demo-Twincat-Appl
    - **Project Variants**: TwinCAT projects can define variants (different configurations of the same project, e.g. for different PLC targets or feature sets). The action allows to specify what variant should be build.
    - **Unittests** can be implemented, are automatically executed and published on GitHub. The project variant for testing can optionally differ from the variant, which is used for building. This is useful to setup simulation parameters in the testing variant.
    - **Static code analysis** is executed automatically as well. The result is published on GitHub.
-   - While the tools utilized by this action can run self-hosted, here this is happening on a build system set-up and hosted by [Zeugwerk](https://www.zeugwerk.at). Because the workflow needs to connect to that external build server to perform the compilation, it must authenticate itself. This is why the workflow requires a username and password – they allow GitHub Actions to log in to the Zeugwerk build system, run the build there, and return the finished Windows installer back to GitHub.
    - After building, it packages everything into an **installer for Windows**.
 3. Once the workflow finishes, you can download the installer from the Actions → **Artifacts** section of the GitHub repository.
 Running this installer on a Windows machine allows you to install the PLC program onto a PLC target (for example, a Beckhoff PLC or a TwinCAT runtime on Windows).
+
+While the tools utilized by this action can run self-hosted, here this is happening on a build system set-up and hosted by [Zeugwerk](https://www.zeugwerk.at). Because the workflow needs to connect to that external build server to perform the compilation, it must authenticate itself. This is why the workflow requires a username and password – they allow GitHub Actions to log in to the Zeugwerk build system, run the build there, and return the finished Windows installer back to GitHub.
 
 In short: you just commit your code, and thus automatically gives you a ready-to-use Windows installer that can install the PLC on a target system.
 
