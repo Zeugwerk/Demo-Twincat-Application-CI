@@ -15,12 +15,12 @@ This demo project shows how to use zkbuild-action to build and test a Twincat PL
 In short: Every push to this repository automatically gives a ready-to-use Windows installer that can install the "MyApplication" PLC on a target system.
 
 And the long story...
-This project uses GitHub Actions to automatically build and package the application for you.
+This project uses GitHub Actions to automatically build and package the application.
 GitHub Actions is a feature of GitHub that lets you define "workflows": Scripts that run whenever something happens in the repository (for example, when new code is committed).
 
 In this repository, [the workflow](https://github.com/Zeugwerk/Demo-Twincat-Application-CI/blob/main/.github/workflows/build.yml) is set up so that:
 
-1. Whenever you push a commit to the repository, GitHub automatically starts the workflow in the background.
+1. Whenever something is pushed to the repository, GitHub automatically starts the workflow in the background.
 2. The workflow uses a custom GitHub Action called [zkbuild](https://github.com/Zeugwerk/zkbuild-action).
    - This action knows how to **compile and package** the TwinCAT PLC project in the repository.
    - zkbuild supports multiple TwinCAT versions, including **3.1.4024** and **3.1.4026**.
