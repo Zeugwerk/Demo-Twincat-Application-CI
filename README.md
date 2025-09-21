@@ -13,7 +13,7 @@ This demo project shows how to use zkbuild-action to build and test a Twincat PL
 ## What is happening here
 
 This project uses GitHub Actions to automatically build and package the application for you.
-GitHub Actions is a feature of GitHub that lets you define "workflows"—scripts that run whenever something happens in the repository (for example, when new code is committed).
+GitHub Actions is a feature of GitHub that lets you define "workflows": Scripts that run whenever something happens in the repository (for example, when new code is committed).
 
 In this repository, [the workflow](https://github.com/Zeugwerk/Demo-Twincat-Application-CI/blob/main/.github/workflows/build.yml) is set up so that:
 
