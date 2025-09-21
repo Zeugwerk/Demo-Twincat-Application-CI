@@ -1,9 +1,11 @@
 # Demo-Twincat-Application-CI
 
-work in progress
+![status](https://img.shields.io/badge/status-work%20in%20progress-orange?style=for-the-badge&logo=github)
+
+> ⚠️ **This repository is not finished yet.**  
+> Features and workflows are still being developed.
 
 - [ ] variants
-- [x] enable unit tests
 - [ ] application installer
 
 
