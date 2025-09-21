@@ -19,7 +19,7 @@ In this repository, [the workflow](https://github.com/Zeugwerk/Demo-Twincat-Appl
 1. Whenever you push a commit to the repository, GitHub automatically starts the workflow in the background.
 2. The workflow uses a custom GitHub Action called [zkbuild](https://github.com/Zeugwerk/zkbuild-action).
    - This action knows how to compile and package the TwinCAT PLC project in the repository.
-   - While the tools utilized by this action can run self-hosted, here this is happening on a build system set-up and hosted by [Zeugwerk](https://www.zeugwerk.at).
+   - While the tools utilized by this action can run self-hosted, here this is happening on a build system set-up and hosted by [Zeugwerk](https://www.zeugwerk.at). Because the workflow needs to connect to that external build server to perform the compilation, it must authenticate itself. This is why the workflow requires a username and password – they allow GitHub Actions to log in to the Zeugwerk build system, run the build there, and return the finished Windows installer back to GitHub.
    - After building, it packages everything into an installer for Windows.
 3. Once the workflow finishes, you can download the installer from the Actions → Artifacts section of the GitHub repository.
 Running this installer on a Windows machine allows you to install the PLC program onto a PLC target (for example, a Beckhoff PLC or a TwinCAT runtime on Windows).
