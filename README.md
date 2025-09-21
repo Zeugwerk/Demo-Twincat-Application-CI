@@ -12,7 +12,7 @@ This demo project shows how to use zkbuild-action to build and test a Twincat PL
 
 ## What is happening here
 
-In short: you just commit your code, and this automatically gives you a ready-to-use Windows installer that can install the PLC on a target system.
+In short: Every push to this repository automatically gives a ready-to-use Windows installer that can install the "MyApplication" PLC on a target system.
 
 And the long story...
 This project uses GitHub Actions to automatically build and package the application for you.
