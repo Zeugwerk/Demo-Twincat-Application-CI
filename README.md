@@ -4,7 +4,6 @@
 
 > ⚠️ **This repository is not finished yet.**  
 
-- [ ] variants
 - [ ] application installer
 
 
