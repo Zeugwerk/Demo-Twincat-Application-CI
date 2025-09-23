@@ -9,6 +9,8 @@
 
 This demo project shows how to use zkbuild-action to build and test a Twincat PLC in CI on GitHub. It showcases the basic setup, configuration, secrets, and workflow.
 
+Go to [actions](https://github.com/Zeugwerk/Demo-Twincat-Application-CI/actions) to have a look at the CI pipeline.
+
 ## What is happening here
 
 In short: Every push to this repository automatically gives a ready-to-use Windows installer that can install the "MyApplication" PLC on a target system.
