@@ -2,14 +2,6 @@
 
 [![Build](https://img.shields.io/github/actions/workflow/status/Zeugwerk/Demo-Twincat-Application-CI/build.yml?branch=main&style=for-the-badge&logo=github&label=Build%20Status)](https://github.com/Zeugwerk/Demo-Twincat-Application-CI/actions/workflows/build.yml)
 
-
-![status](https://img.shields.io/badge/status-work%20in%20progress-orange?style=for-the-badge&logo=github)
-
-> ⚠️ **This repository is not finished yet.**  
-
-- [ ] application installer
-
-
 This demo project shows how to use zkbuild-action to build and test a Twincat PLC in CI on GitHub. It showcases the basic setup, configuration, secrets, and workflow.
 
 Go to [actions](https://github.com/Zeugwerk/Demo-Twincat-Application-CI/actions/workflows/build.yml) to have a look at the CI pipeline.
