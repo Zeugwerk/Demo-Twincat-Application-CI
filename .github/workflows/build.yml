@@ -1,4 +1,4 @@
-name: Build
+name: CI Pipeline
 on:
   push:
     branches:
@@ -9,34 +9,36 @@ on:
     branches: [ main ]
   workflow_dispatch:
 jobs:
-  Build:
-    name: Build/Test
+  build-test:
+    name: Build & Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Build
+      - name: Checkout 
+        uses: actions/checkout@v3
+      - name: Build & Package
         uses: Zeugwerk/zkbuild-action@1.0.0
         with:
           username: ${{ secrets.ACTIONS_ZGWK_USERNAME }}
           password: ${{ secrets.ACTIONS_ZGWK_PASSWORD }}
-#          tcversion: "TC3.1.4026"
           variant-build: "Machine1"
           variant-test: "NoHardware"
           static-analysis: true
+          installer: true
           workspace: "MyApplication"
           skip-build: false
           skip-test: false
-      - name: Publish Unittest
+      - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         with:
           files: archive/tests/**/TcUnit_xUnit_results.xml
-      - name: Checkstyle report
+      - name: Publish Checkstyle Report
         uses: jwgmeligmeyling/checkstyle-github-action@a12be500c097a5cedab881d4785ef9b4a4d3ee6a
         with:
           path: "**/*-checkstyle-result.xml"
-#      - name: Upload
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: MyApplication-Machine1
-#          path: |
-#            **/MyApplication_TC3.1.4026_Machine1
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: MyApplication-Machine1
+          path: | 
+                **/**/*.exe
+
