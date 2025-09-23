@@ -1,5 +1,7 @@
 # Demo-Twincat-Application-CI
 
+[![Build](https://github.com/Zeugwerk/Demo-Twincat-Application-CI/actions/workflows/build.yml/badge.svg)](https://github.com/Zeugwerk/Demo-Twincat-Application-CI/actions/workflows/build.yml)
+
 ![status](https://img.shields.io/badge/status-work%20in%20progress-orange?style=for-the-badge&logo=github)
 
 > ⚠️ **This repository is not finished yet.**  
