@@ -40,5 +40,6 @@ jobs:
         with:
           name: MyApplication-Machine1
           path: | 
-                **/**/*.exe
+                archive/**
+                
 
