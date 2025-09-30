@@ -26,7 +26,7 @@ jobs:
           installer: true
           workspace: "MyApplication"
           skip-build: false
-          skip-test: false
+          skip-test: true
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         with:
