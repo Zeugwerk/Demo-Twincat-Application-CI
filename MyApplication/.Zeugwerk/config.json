@@ -7,7 +7,7 @@
       "plcs": [
         {
           "version": "1.0.0.0",
-          "distributor-name": null,
+          "distributor-name": "MyCompany",
           "name": "MyApplication",
           "title": "MyApplication",
           "type": "Application",
