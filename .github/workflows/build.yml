@@ -20,6 +20,7 @@ jobs:
         with:
           username: ${{ secrets.ACTIONS_ZGWK_USERNAME }}
           password: ${{ secrets.ACTIONS_ZGWK_PASSWORD }}
+          tcversion: "TC3.1.4026"
           variant-build: "Machine1"
           variant-test: "NoHardware"
           static-analysis: true
