@@ -25,7 +25,6 @@ jobs:
           variant-test: "NoHardware"
           static-analysis: true
           installer: true
-          workspace: "MyApplication"
           skip-build: false
           skip-test: false
           force-checks: true
