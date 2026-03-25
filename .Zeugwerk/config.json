@@ -1,5 +1,7 @@
-"modules": [
-  "MyApplication",
-  "MyHmi"
-]
+{
+  "modules": [
+    "MyApplication",
+    "MyHmi"
+  ]
+}
 
