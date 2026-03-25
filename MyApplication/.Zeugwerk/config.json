@@ -31,7 +31,8 @@
               "branch": "main",
               "target": "TC3.1",
               "configuration": "Release",
-              "distributor-name": "Stefan Besler"
+              "distributor-name": "Stefan Besler",
+              "namespace": "Pushover"
             },
             {
               "version": "1.0.0.0",
@@ -39,15 +40,16 @@
               "branch": "main",
               "target": "TC3.1",
               "configuration": "Release",
-              "distributor-name": "Zeugwerk GmbH"
+              "distributor-name": "Zeugwerk GmbH",
+              "namespace": "Testbench"
             }
           ],
           "references": {
             "*": [
-				"Tc2_Standard=*",
-				"Tc2_System=*",
-				"Tc3_Module=*"
-			]
+              "Tc2_Standard=*",
+              "Tc2_System=*",
+              "Tc3_Module=*"
+            ]
           },
           "repositories": [],
           "bindings": {},
@@ -56,9 +58,11 @@
             "argument": {},
             "license": {}
           },
+          "description": "",
           "icon-file": "",
           "project-url": "",
           "display-name": "MyApplication",
+          "authors": "",
           "entitlement": "",
           "license": "",
           "license-file": "",
@@ -67,5 +71,5 @@
       ]
     }
   ],
-  "directories": null
+  "modules": null
 }

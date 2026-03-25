@@ -1,0 +1,11 @@
+{
+  "fileversion": 1,
+  "solution": "MyHmi.sln",
+  "projects": [
+    {
+      "name": "MyHmi",
+      "type": "Hmi"
+    }
+  ],
+  "modules": null
+}
