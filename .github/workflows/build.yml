@@ -28,6 +28,7 @@ jobs:
           skip-build: false
           skip-test: false
           force-checks: true
+          installer-name: "Demo-Twincat-Application Setup"
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         with:
